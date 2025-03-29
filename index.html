@@ -203,7 +203,7 @@
         formData.set("group", selectedGroups);
         formData.append("line_userID", profile.userId);
         formData.append("line_displayName", profile.displayName);
-        
+
         for (let [key, value] of formData.entries()) {
           console.log(`${key}: ${value}`);
         }
@@ -217,6 +217,7 @@
           if (response.ok) {
             alert("✅ Form submitted successfully!");
             form.reset();
+            window.close();
   
             groupChoices.destroy();
             groupChoices = new Choices(groupSelectElement, {
