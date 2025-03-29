@@ -201,6 +201,7 @@
         const formData = new FormData(form);
         formData.set("group", selectedGroups);
         formData.append("line_userID", profile.userId);
+        formData.append("line_displayName", profile.displayName);
   
         try {
           const response = await fetch(scriptURL, {
