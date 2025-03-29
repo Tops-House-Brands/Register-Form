@@ -5,23 +5,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Register - Topster Bot.</title>
-
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-
   <!-- Choices.js CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+  <!-- line liff sdk -->
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 </head>
 
-<body
-  class="min-h-screen bg-gradient-to-r from-[#ff3d1a] to-[#ff3d1a] flex items-center justify-center px-5 py-5">
+<body class="min-h-screen bg-gradient-to-r from-[#ff3d1a] to-[#ff3d1a] flex items-center justify-center px-5 py-5">
   <div class="w-full max-w-md bg-white rounded-2xl shadow-lg p-5">
     <form id="contact-form" class="space-y-4">
-      <div id="pictureUrl" class="w-[100px] h-[100px] rounded-full bg-center bg-cover my-2 mx-auto"
-     style="background-image: url('https://sprofile.line-scdn.net/0hLTkTmFVVE3tGLQNm2FltBDZ9EBFlXEppPR4LSXB4TEt6T1R4PUgPTSYqRBl6TVQvbUMJFHAkGhxKPmQdWHvvT0EdTkp6G1UuYk9YmA');">
+      
+      <!-- Line Picture Profile -->
+      <div id="pictureUrl" class="w-[100px] h-[100px] rounded-full bg-center bg-cover my-2 mx-auto border-2 border-orange-500"
+        style="background-image: url('https://lh5.googleusercontent.com/d/1zq1TVKLVWjwC5asXlNaIh5UUadMj3zvz');">
       </div>
-      <div id="displayName" class="text-xl font-bold text-center">Nu Phitsanu</div>
+      <div id="displayName" class="text-xl font-bold text-center">Loading...</div>
 
+      <!-- Register - Topster Bot. -->
       <div class="relative w-full flex justify-center">
         <h3 class="text-3xl font-bold text-gray-800 text-center pb-3">
           Register - Topster Bot.
@@ -33,47 +35,43 @@
       <div>
         <label for="first_name" class="block text-sm font-medium text-gray-900">Firstname (ภาษาอังกฤษ)</label>
         <input type="text" name="first_name" id="first_name" required pattern="[A-Za-z\s]+"
-        title="ระบุชื่อเป็นภาษาอังกฤษ"
-        oninput="this.setCustomValidity('')"
-        oninvalid="this.setCustomValidity('ระบุชื่อเป็นภาษาอังกฤษ')"
-        class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500" />    
+          title="ระบุชื่อเป็นภาษาอังกฤษ" oninput="this.setCustomValidity('')"
+          oninvalid="this.setCustomValidity('ระบุชื่อเป็นภาษาอังกฤษ')"
+          class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-700" />
       </div>
 
       <!-- Last Name -->
       <div>
         <label for="last_name" class="block text-sm font-medium text-gray-900">Lastname (ภาษาอังกฤษ)</label>
         <input type="text" name="last_name" id="last_name" required pattern="[A-Za-z\s]+"
-        title="ระบุนามสกุลเป็นภาษาอังกฤษ"
-        oninput="this.setCustomValidity('')"
-        oninvalid="this.setCustomValidity('ระบุนามสกุลเป็นภาษาอังกฤษ')"
-        class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500" />
+          title="ระบุนามสกุลเป็นภาษาอังกฤษ" oninput="this.setCustomValidity('')"
+          oninvalid="this.setCustomValidity('ระบุนามสกุลเป็นภาษาอังกฤษ')"
+          class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-700" />
       </div>
 
       <!-- Employee ID -->
       <div>
         <label for="employee_id" class="block text-sm font-medium text-gray-900">Employee ID (รหัสพนักงาน)</label>
         <input type="text" name="employee_id" id="employee_id" required pattern="[0-9]+"
-        title="ระบุรหัสพนักงานเป็นตัวเลข"
-        oninput="this.setCustomValidity('')"
-        oninvalid="this.setCustomValidity('ระบุรหัสพนักงานเป็นตัวเลข')"
-        class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500" />
+          title="ระบุรหัสพนักงานเป็นตัวเลข" oninput="this.setCustomValidity('')"
+          oninvalid="this.setCustomValidity('ระบุรหัสพนักงานเป็นตัวเลข')"
+          class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-700" />
       </div>
 
-       <!-- Email -->
-       <div>
+      <!-- Email -->
+      <div>
         <label for="your_email" class="block text-sm font-medium text-gray-900">Email (อีเมลล์ Tops)</label>
-          <input type="email" name="your_email" id="your_email" autocomplete="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-          title="ระบุอีเมลล์ Tops ให้ถูกต้อง"
-          oninput="this.setCustomValidity('')"
-          oninvalid="this.setCustomValidity('ระบุอีเมลล์ Tops ให้ถูกต้อง')"
-          class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500" />
+        <input type="email" name="your_email" id="your_email" autocomplete="email" required
+          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="ระบุอีเมลล์ Tops ให้ถูกต้อง"
+          oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('ระบุอีเมลล์ Tops ให้ถูกต้อง')"
+          class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-700" />
       </div>
 
       <!-- Group -->
       <div>
         <label for="group-select" class="block text-sm font-medium text-gray-900">Group (เลือกกลุ่มที่สินค้า อย่างน้อย 1 กลุ่ม)</label>
-          <select name="group[]" id="group-select" multiple required
-          class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500">
+        <select name="group[]" id="group-select" multiple required
+          class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-700">
           <option value="All Group">All Group</option>
           <option value="Adult & Baby Care">Adult & Baby Care</option>
           <option value="Adult Hygiene">Adult Hygiene</option>
@@ -151,7 +149,7 @@
 
       <!-- Submit -->
       <button type="submit"
-        class="w-full bg-gradient-to-r from-blue-700 to-blue-700 hover:from-lime-400 hover:to-lime-500 text-white py-2 rounded-md text-base font-semibold transition">
+        class="w-full bg-gradient-to-r from-blue-700 to-blue-700 hover:from-blue-500 hover:to-blue-500 text-white py-2 rounded-md text-base font-semibold transition">
         Submit
       </button>
     </form>
@@ -161,14 +159,30 @@
   <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    // document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", async function () {
+      
+      // เริ่มต้น LIFF
+      await liff.init({ liffId: '2007107416-ZyYRyWWg' });
+
+      // ถ้ายังไม่ login → บังคับ login
+      if (!liff.isLoggedIn()) {
+        liff.login({ redirectUri: window.location.href });
+        return;
+      }
+
+      // ดึงข้อมูล profile จาก LINE
+      const profile = await liff.getProfile();
+      document.getElementById("pictureUrl").style.backgroundImage = `url('${profile.pictureUrl}')`;
+      document.getElementById("displayName").innerText = profile.displayName;
+
       const form = document.getElementById("contact-form");
       const groupSelectElement = document.getElementById("group-select");
       const submitButton = form.querySelector("button");
 
-      const scriptURL = "https://script.google.com/macros/s/AKfycbwmDbh0gUz7XnsxpwrhfZGOZvMI8J2fAqhsa_PmEiRTUCYwJcGVQsQz_7eNj8hxa7Ms/exec";
+      const scriptURL = "https://script.google.com/macros/s/AKfycbz8dUr999Ofpw8vCRjEKBQZa7S-y1pwp7XAVqYnFfMYFC2N7Ksq2vgi3_XvgUfI5g-DNA/exec";
 
-      // ✅ สร้าง Choices.js โดยไม่ใช้ placeholder
+      // สร้าง Choices.js
       let groupChoices = new Choices(groupSelectElement, {
         removeItemButton: true,
         searchEnabled: true,
@@ -186,6 +200,8 @@
         const selectedGroups = groupChoices.getValue(true).join(", ");
         formData.set("group", selectedGroups);
 
+        formData.append("line_userID", profile.userId);
+
         try {
           const response = await fetch(scriptURL, {
             method: "POST",
@@ -193,7 +209,7 @@
           });
 
           if (response.ok) {
-            alert("Form submitted successfully! ✅");
+            alert("✅ Form submitted successfully!");
             form.reset();
 
             groupChoices.destroy();
