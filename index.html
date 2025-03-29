@@ -203,7 +203,10 @@
         formData.set("group", selectedGroups);
         formData.append("line_userID", profile.userId);
         formData.append("line_displayName", profile.displayName);
-        console.log(formData);
+        
+        for (let [key, value] of formData.entries()) {
+          console.log(`${key}: ${value}`);
+        }
   
         try {
           const response = await fetch(scriptURL, {
