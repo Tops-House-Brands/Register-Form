@@ -168,6 +168,7 @@
       }
   
       const profile = await liff.getProfile();
+      console.log(profile);
       document.getElementById("pictureUrl").style.backgroundImage = `url('${profile.pictureUrl}')`;
       document.getElementById("displayName").innerText = profile.displayName;
   
@@ -202,6 +203,7 @@
         formData.set("group", selectedGroups);
         formData.append("line_userID", profile.userId);
         formData.append("line_displayName", profile.displayName);
+        console.log(formData);
   
         try {
           const response = await fetch(scriptURL, {
