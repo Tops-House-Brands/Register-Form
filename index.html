@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - Topster Bot.</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Choices.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+</head>
+
+<body
+  class="min-h-screen bg-gradient-to-r from-[#ff3d1a] to-[#ff3d1a] flex items-center justify-center px-5 py-5">
+  <div class="w-full max-w-md bg-white rounded-2xl shadow-lg p-5">
+    <form id="contact-form" class="space-y-4">
+      <div id="pictureUrl" class="w-[100px] h-[100px] rounded-full bg-center bg-cover my-2 mx-auto"
+     style="background-image: url('https://sprofile.line-scdn.net/0hLTkTmFVVE3tGLQNm2FltBDZ9EBFlXEppPR4LSXB4TEt6T1R4PUgPTSYqRBl6TVQvbUMJFHAkGhxKPmQdWHvvT0EdTkp6G1UuYk9YmA');">
+      </div>
+      <div id="displayName" class="text-xl font-bold text-center">Nu Phitsanu</div>
+
+      <div class="relative w-full flex justify-center">
+        <h3 class="text-3xl font-bold text-gray-800 text-center pb-3">
+          Register - Topster Bot.
+        </h3>
+        <div class="absolute bottom-0 w-[350px] h-2.5 bg-gradient-to-r from-blue-700 to-blue-700 rounded-full"></div>
+      </div>
+
+      <!-- First Name -->
+      <div>
+        <label for="first_name" class="block text-sm font-medium text-gray-900">Firstname (ภาษาอังกฤษ)</label>
+        <input type="text" name="first_name" id="first_name" required pattern="[A-Za-z\s]+"
+        title="ระบุชื่อเป็นภาษาอังกฤษ"
+        oninput="this.setCustomValidity('')"
+        oninvalid="this.setCustomValidity('ระบุชื่อเป็นภาษาอังกฤษ')"
+        class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500" />    
+      </div>
+
+      <!-- Last Name -->
+      <div>
+        <label for="last_name" class="block text-sm font-medium text-gray-900">Lastname (ภาษาอังกฤษ)</label>
+        <input type="text" name="last_name" id="last_name" required pattern="[A-Za-z\s]+"
+        title="ระบุนามสกุลเป็นภาษาอังกฤษ"
+        oninput="this.setCustomValidity('')"
+        oninvalid="this.setCustomValidity('ระบุนามสกุลเป็นภาษาอังกฤษ')"
+        class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500" />
+      </div>
+
+      <!-- Employee ID -->
+      <div>
+        <label for="employee_id" class="block text-sm font-medium text-gray-900">Employee ID (รหัสพนักงาน)</label>
+        <input type="text" name="employee_id" id="employee_id" required pattern="[0-9]+"
+        title="ระบุรหัสพนักงานเป็นตัวเลข"
+        oninput="this.setCustomValidity('')"
+        oninvalid="this.setCustomValidity('ระบุรหัสพนักงานเป็นตัวเลข')"
+        class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500" />
+      </div>
+
+       <!-- Email -->
+       <div>
+        <label for="your_email" class="block text-sm font-medium text-gray-900">Email (อีเมลล์ Tops)</label>
+          <input type="email" name="your_email" id="your_email" autocomplete="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+          title="ระบุอีเมลล์ Tops ให้ถูกต้อง"
+          oninput="this.setCustomValidity('')"
+          oninvalid="this.setCustomValidity('ระบุอีเมลล์ Tops ให้ถูกต้อง')"
+          class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500" />
+      </div>
+
+      <!-- Group -->
+      <div>
+        <label for="group-select" class="block text-sm font-medium text-gray-900">Group (เลือกกลุ่มที่สินค้า อย่างน้อย 1 กลุ่ม)</label>
+          <select name="group[]" id="group-select" multiple required
+          class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500">
+          <option value="All Group">All Group</option>
+          <option value="Adult & Baby Care">Adult & Baby Care</option>
+          <option value="Adult Hygiene">Adult Hygiene</option>
+          <option value="Appliances">Appliances</option>
+          <option value="Bakery">Bakery</option>
+          <option value="Bakery Hub">Bakery Hub</option>
+          <option value="Beer">Beer</option>
+          <option value="Beverage">Beverage</option>
+          <option value="Bill Payment Top up and Sims Commission">Bill Payment Top up and Sims Commission</option>
+          <option value="Bill Payment Top up and Sims GP">Bill Payment Top up and Sims GP</option>
+          <option value="Chef YIM">Chef YIM</option>
+          <option value="Cleaning">Cleaning</option>
+          <option value="Club Format">Club Format</option>
+          <option value="CMK">CMK</option>
+          <option value="Coffee business">Coffee business</option>
+          <option value="Cooking">Cooking</option>
+          <option value="Deli">Deli</option>
+          <option value="EatThai">EatThai</option>
+          <option value="F&B Category">F&B Category</option>
+          <option value="Famous Dish">Famous Dish</option>
+          <option value="Fashion">Fashion</option>
+          <option value="Financial Product Commission">Financial Product Commission </option>
+          <option value="Fresh Meat">Fresh Meat</option>
+          <option value="Fresh Packaged">Fresh Packaged</option>
+          <option value="Fresh Seafood">Fresh Seafood</option>
+          <option value="Frozen Food">Frozen Food</option>
+          <option value="GM">GM</option>
+          <option value="GM/Non FMCG">GM/Non FMCG</option>
+          <option value="Hair Care">Hair Care</option>
+          <option value="Health">Health</option>
+          <option value="Home Care">Home Care</option>
+          <option value="Income Sharing">Income Sharing</option>
+          <option value="Inter Cooking">Inter Cooking</option>
+          <option value="Inter Packaged">Inter Packaged</option>
+          <option value="International Fresh Packaged">International Fresh Packaged </option>
+          <option value="Jingjai Market">Jingjai Market</option>
+          <option value="Liquor GM">Liquor GM</option>
+          <option value="Liquor Seasonal">Liquor Seasonal</option>
+          <option value="Logistics and Others Service Commission">Logistics and Others Service Commission</option>
+          <option value="Logistics and Others Service GP">Logistics and Others Service GP</option>
+          <option value="Makeup">Makeup</option>
+          <option value="Milk & Baby Food">Milk & Baby Food</option>
+          <option value="Miscellaneous">Miscellaneous</option>
+          <option value="Non Merchandise Equipment">Non Merchandise Equipment</option>
+          <option value="Oral Care">Oral Care</option>
+          <option value="OTOP">OTOP</option>
+          <option value="Packaged">Packaged</option>
+          <option value="PET N ME">PET N ME</option>
+          <option value="Premium">Premium</option>
+          <option value="Produce">Produce</option>
+          <option value="RTE Inhouse">RTE Inhouse</option>
+          <option value="RTE-Deli">RTE-Deli</option>
+          <option value="Skin Care">Skin Care</option>
+          <option value="Snack">Snack</option>
+          <option value="Spirits">Spirits</option>
+          <option value="Supplier Food Coupon">Supplier Food Coupon</option>
+          <option value="Tobacco">Tobacco</option>
+          <option value="Tops Care">Tops Care</option>
+          <option value="Tops Drink Counter">Tops Drink Counter</option>
+          <option value="Tops Vita">Tops Vita</option>
+          <option value="Topsvita">Topsvita</option>
+          <option value="Western Delicacies">Western Delicacies</option>
+          <option value="Wine">Wine</option>
+        </select>
+      </div>
+
+      <!-- Remark -->
+      <div>
+        <label for="remark" class="block text-sm font-medium text-gray-900">Remark (หมายเหตุ)</label>
+        <div class="mt-1">
+          <textarea name="remark" id="remark" rows="2"
+            class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-indigo-600 sm:text-sm"></textarea>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit"
+        class="w-full bg-gradient-to-r from-blue-700 to-blue-700 hover:from-lime-400 hover:to-lime-500 text-white py-2 rounded-md text-base font-semibold transition">
+        Submit
+      </button>
+    </form>
+  </div>
+
+  <!-- Choices.js -->
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("contact-form");
+      const groupSelectElement = document.getElementById("group-select");
+      const submitButton = form.querySelector("button");
+
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwmDbh0gUz7XnsxpwrhfZGOZvMI8J2fAqhsa_PmEiRTUCYwJcGVQsQz_7eNj8hxa7Ms/exec";
+
+      // ✅ สร้าง Choices.js โดยไม่ใช้ placeholder
+      let groupChoices = new Choices(groupSelectElement, {
+        removeItemButton: true,
+        searchEnabled: true,
+        shouldSort: false,
+        itemSelectText: "",
+      });
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
+
+        const formData = new FormData(form);
+        const selectedGroups = groupChoices.getValue(true).join(", ");
+        formData.set("group", selectedGroups);
+
+        try {
+          const response = await fetch(scriptURL, {
+            method: "POST",
+            body: formData,
+          });
+
+          if (response.ok) {
+            alert("Form submitted successfully! ✅");
+            form.reset();
+
+            groupChoices.destroy();
+            groupChoices = new Choices(groupSelectElement, {
+              removeItemButton: true,
+              searchEnabled: true,
+              shouldSort: false,
+              itemSelectText: "",
+            });
+          } else {
+            throw new Error("Submit failed");
+          }
+        } catch (err) {
+          alert("❌ Error submitting form.");
+          console.error(err);
+        } finally {
+          submitButton.disabled = false;
+          submitButton.textContent = "Submit";
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
